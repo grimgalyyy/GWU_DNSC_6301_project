@@ -63,9 +63,84 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
                        random_state=12345, splitter='best')`
 ```
 ### Quantitative Analysis
+* Metrics used to evaluate your final model: Confusion Matrix; AIR
+* State the final values of the metrics for all data:
+   Confusion matrix by RACE=1
+                actual: 1 actual: 0
+   predicted: 1       447       387
+   predicted: 0       139       501
+   (Hispanic)
 
+   Confusion matrix by RACE=2
+                actual: 1 actual: 0
+   predicted: 1       449       348
+   predicted: 0       157       537
+   (Black)
+
+   Confusion matrix by RACE=3
+                actual: 1 actual: 0
+   predicted: 1       176       813
+   predicted: 0        72      1228
+   (White)
+
+   Confusion matrix by RACE=4
+                actual: 1 actual: 0
+   predicted: 1       186       784
+   predicted: 0        59      1217
+   (Asian)
+
+   White proportion accepted: 0.568
+   Hispanic proportion accepted: 0.434
+   hispanic-to-white AIR: 0.76
+
+   White proportion accepted: 0.568
+   Black proportion accepted: 0.465
+   black-to-white AIR: 0.82
+
+   White proportion accepted: 0.568
+   Asian proportion accepted: 0.568
+   asian-to-white AIR: 1.00
+
+   Confusion matrix by SEX=1
+                actual: 1 actual: 0
+   predicted: 1       546       905
+   predicted: 0       179      1292
+   (Male)
+
+   Confusion matrix by SEX=2
+                actual: 1 actual: 0
+   predicted: 1       712      1427
+   predicted: 0       248      2191
+   (Female)
+
+   Male proportion accepted: 0.503
+   Female proportion accepted: 0.533
+   female-to-male AIR: 1.06
+![image](https://user-images.githubusercontent.com/89756854/131276170-b156488a-918a-4a2d-8b7e-918fe31e7680.png)
+
+* Provide any plots related to your data or final model: 
+
+   Data Histograms
+
+   ![image](https://user-images.githubusercontent.com/89756854/131276416-23a77ffc-0e5b-4a06-9fdd-30e08aae0bc1.png)
+
+   Heat Map
+
+   ![image](https://user-images.githubusercontent.com/89756854/131276440-49f65a56-dcb5-4f84-a3b6-f77a0264d242.png)
+
+   Iteration Plot
+
+   ![image](https://user-images.githubusercontent.com/89756854/132137674-a3b73780-4fe3-4546-a72e-a9434f625f6d.png)
 
 #### Correlation Heatmap
 ![Correlation Heatmap](download.png)
 
 
+### Ethical considerations
+* Describe potential negative impacts of using your model: 
+  * Math or software problems: In this data set’s variables there’s correlation of DELINQ_NEXT and Race, which is a negative impact.
+  * Real-world risks: Using this model might result in group disparities.
+* Describe potential uncertainties relating to the impacts of using your model: 
+  * Math or software problems: Data set has implicit demographic information in variables.
+  * Real-world risks: The model has time lag, and markets might change during the training time.
+* Describe any unexpected or results: Through variable importances, Pay_0 weighs too much in the final model, and it results in data lag.
