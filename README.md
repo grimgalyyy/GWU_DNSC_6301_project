@@ -137,7 +137,7 @@ female-to-male AIR: 1.06
 
 ### Ethical considerations
 * **Describe potential negative impacts of using your model: 
-  * Math or software problems: The variables in this data set In this data set’s variables there’s correlation of DELINQ_NEXT and Race, which is a negative impact.
+  * Math or software problems: In this data set’s variables there’s correlation of DELINQ_NEXT and Race, which is a negative impact.
   * Real-world risks: Using this model might result in group disparities.
 * **Describe potential uncertainties relating to the impacts of using your model: 
   * Math or software problems: Data set has implicit demographic information in variables.
