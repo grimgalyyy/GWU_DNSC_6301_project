@@ -63,7 +63,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
                        random_state=12345, splitter='best')`
 ```
 ### Quantitative Analysis
-* Metrics used to evaluate your final model: Confusion Matrix; AIR
+* Metrics used to evaluate your final model: Confusion Matrix; AIR; AUC
 * State the final values of the metrics for all data:
    Confusion matrix by RACE=1
              actual: 1 actual: 0
