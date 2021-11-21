@@ -117,7 +117,15 @@ Male proportion accepted: 0.503
 Female proportion accepted: 0.533
 female-to-male AIR: 1.06
 
+Turns out depth= **6** was a good choice for a final model!
 
+* Training AUC: **0.78**
+* Validation AUC: **0.75**
+* Test AUC: **0.74**
+* Asian-to-White AIR: **1.00**
+* Black-to-White AIR: **0.85**
+* Female-to-Male AIR: **1.02**
+* Hispanic-to-White AIR: **0.83**
 * **Provide any plots related to your data or final model**: 
 
    Data Histograms
