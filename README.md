@@ -137,9 +137,9 @@ female-to-male AIR: 1.06
 
 ### Ethical considerations
 * **Describe potential negative impacts of using your model: 
-  * Math or software problems: In this data set’s variables there’s correlation of DELINQ_NEXT and Race, which is a negative impact.
-  * Real-world risks: Using this model might result in group disparities.
+  * Math or software problems: There's negative correlation of variables of DELINQ_NEXT and Race which may negatively impact this model.
+  * Real-world risks: Since the dataset has race, it may cause outcome varies in different group.
 * **Describe potential uncertainties relating to the impacts of using your model: 
-  * Math or software problems: Data set has implicit demographic information in variables.
-  * Real-world risks: The model has time lag, and markets might change during the training time.
-* **Describe any unexpected or results: Through variable importances, Pay_0 weighs too much in the final model, and it results in data lag.
+  * Math or software problems: The race variable inside the dataset is not clear, we don't have much information.
+  * Real-world risks: Since the model's prediction has time lag and the market changes in realtime, it may cause wrongful prediction. 
+* **Describe any unexpected or results: Since Pay_0 weight too much, it may cause the data lag due to variable significant.
